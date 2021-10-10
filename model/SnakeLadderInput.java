@@ -6,12 +6,12 @@ package com.machinecode.snakeladder.model;
 
 import java.util.Map;
 
-public class SnakeLadderInput {
+public class SnakeLadder {
 	private int numberOfCells;
 	private Map<Integer, Integer> snakes;
 	private Map<Integer, Integer> ladders;
 	private Map<Integer, String> players;
-	public SnakeLadderInput(
+	public SnakeLadder(
 		Map<Integer, Integer> snakes,
 		Map<Integer, Integer> ladders,
 		Map<Integer, String> players,

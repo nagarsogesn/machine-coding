@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import com.machinecode.snakeladder.model.SnakeLadderInput;
+import com.machinecode.snakeladder.model.SnakeLadder;
 import com.machinecode.snakeladder.service.SnakeLadderService;
 import com.machinecode.snakeladder.service.impl.SnakeLadderServiceImpl;
 
@@ -21,7 +21,7 @@ public class SnakeLadderDriver {
 	public static void main(String[] args) {
 		SnakeLadderService snakeLadderService = new SnakeLadderServiceImpl();
 		try {
-			SnakeLadderInput input = getInput();
+			SnakeLadder input = getInput();
 			snakeLadderService.start(input);
 		} catch (FileNotFoundException e) {
 			System.out.println("Error occurred while reading inputs => " + e.getMessage());
@@ -31,14 +31,14 @@ public class SnakeLadderDriver {
 
 	}
 
-	private static SnakeLadderInput getInput() throws FileNotFoundException {
+	private static SnakeLadder getInput() throws FileNotFoundException {
 		File inputFile = new File(FILE_NAME);
 		Scanner scanner = new Scanner(inputFile);
 		int numberOfCells = Integer.parseInt(scanner.nextLine());
 		Map<Integer, Integer> ladders = getLadders(scanner);
 		Map<Integer, Integer> snakes = getSnakes(scanner);
 		Map<Integer, String> players = getPlayers(scanner);
-		SnakeLadderInput input = new SnakeLadderInput(
+		SnakeLadder input = new SnakeLadder(
 			snakes,
 			ladders,
 			players,

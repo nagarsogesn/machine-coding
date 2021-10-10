@@ -8,14 +8,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.machinecode.snakeladder.model.SnakeLadderInput;
+import com.machinecode.snakeladder.model.SnakeLadder;
 import com.machinecode.snakeladder.service.SnakeLadderService;
 import com.machinecode.snakeladder.util.Dice;
 
 public class SnakeLadderServiceImpl implements SnakeLadderService {
 
 	@Override
-	public void start(SnakeLadderInput input) {
+	public void start(SnakeLadder input) {
 		System.out.println("Starting with the game...");
 		Map<Integer, Integer> snakes = input.getSnakes();
 		Map<Integer, Integer> ladders = input.getLadders();
