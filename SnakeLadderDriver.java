@@ -16,7 +16,7 @@ import com.machinecode.snakeladder.service.impl.SnakeLadderServiceImpl;
 
 public class SnakeLadderDriver {
 
-	private static final String FILE_NAME = "/home/shivshankar/Desktop/Flipkart/Inputs/snake_ladder_input";
+	private static final String FILE_NAME = "/home/shivshankar/Desktop/Inputs/snake_ladder_input";
 
 	public static void main(String[] args) {
 		SnakeLadderService snakeLadderService = new SnakeLadderServiceImpl();
