@@ -24,7 +24,9 @@ public class SnakeLadderDriver {
 			SnakeLadderInput input = getInput();
 			snakeLadderService.start(input);
 		} catch (FileNotFoundException e) {
-
+			System.out.println("Error occurred while reading inputs => " + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("some error occured during the game => " + e.getMessage());
 		}
 
 	}
